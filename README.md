@@ -1,6 +1,6 @@
-# project
+# Vue Form Builder
 
-> A Vue.js project
+> A sample drag & drop form builder project that made with Vue.js and Element UI
 
 ## Build Setup
 
