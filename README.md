@@ -1,6 +1,6 @@
 # Vue Form Builder
 
-A sample drag & drop form builder project that made with Vue.js and Element UI ([View Live Demo](https://agitated-mcnulty-a33f0a.netlify.com/))
+A sample drag & drop form builder project that made with Vue.js and Element UI ([View Live Demo](https://vue-formbuilder.netlify.com/))
 
 ![alt text](https://d15k2d11r6t6rl.cloudfront.net/public/users/Integrators/0db9f180-d222-4b2b-9371-cf9393bf4764/c69e8df5-3118-4e31-8e2b-c875e264bf55/formbuilder.PNG "Vue Form Builder Screenshot")
 
