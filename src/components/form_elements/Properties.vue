@@ -50,10 +50,10 @@
 		    	</el-input>
 		  	</el-form-item>
 
-		  	<el-form-item label="Options" prop="inputOptions" v-show="activeForm.options">
+		  	<el-form-item label="Options" v-show="activeForm.options">
 	  			<ul>
 			  		<li v-for="(item, index) in activeForm.options"
-			  			:key="item.optionValue"
+			  			:key="index"
 			  			class="properties__optionslist">
 
 			  			<el-row :gutter="5">
