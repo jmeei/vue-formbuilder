@@ -1,0 +1,74 @@
+// Mixin for css custom properties
+// eg: @include variable(background, blue, --theme-bg)
+@mixin variable($property, $fallback, $variable) {
+  #{$property}: $fallback;
+  #{$property}: var($variable);
+}
+
+// List all the theming styles
+// 
+.wrapper--forms {
+	@include variable(font-family, Arial, --theme-global-font-family);
+	@include variable(color, #777777, --theme-global-font-color);
+	@include variable(font-size, 16, --theme-global-font-size);
+
+	a {
+		@include variable(color, #206C92, --theme-global-link-color);
+	}
+	
+	// Typography
+	h1 { font-size: 2em; }
+	h2 { font-size: 1.5em; }
+	h3 { font-size: 1.17em; }
+	h4 { font-size: 1.12em; }
+	h5 { font-size: .83em; }
+
+	.form__label {
+		display: block;
+
+		@include variable(color, #cccccc, --theme-primary-color);
+		@include variable(font-weight, #cccccc, --theme-label-font-weight);
+		@include variable(font-size, 16, --theme-label-font-size);
+		@include variable(margin-bottom, 10, --theme-label-margin-bottom);
+	}
+
+	.form__helpblock {
+		display: block;
+
+		@include variable(color, #cccccc, --theme-help-text-color);
+		@include variable(font-size, 12, --theme-help-text-font-size);
+		@include variable(margin-top, 10, --theme-help-text-margin-top);
+	}
+
+	.el-input__inner,
+	.el-radio__inner,
+	.el-textarea__inner {
+		@include variable(border-color, #dcdfe6, --theme-input-border-color);
+		@include variable(border-radius, 4, --theme-input-border-radius);
+		
+		&:hover {
+			@include variable(border-color, #dcdfe6, --theme-input-hover-border-color);
+		}
+
+		&:focus {
+			@include variable(border-color, #dcdfe6, --theme-input-focus-border-color);
+			box-shadow: 0 0 0 2px var(--theme-input-shadow-color);
+		}
+	}
+
+	.el-input-number__decrease {
+		@include variable(border-top-left-radius, 4, --theme-input-border-radius);
+		@include variable(border-bottom-left-radius, 4, --theme-input-border-radius);
+	}
+
+	.el-input-number__increase {
+		@include variable(border-top-right-radius, 4, --theme-input-border-radius);
+		@include variable(border-bottom-right-radius, 4, --theme-input-border-radius);
+	}
+
+	.form__button {
+		@include variable(background-color, black, --theme-button-background);
+		@include variable(border-color, black, --theme-button-border-color);
+		@include variable(color, white, --theme-button-color);
+	}
+}

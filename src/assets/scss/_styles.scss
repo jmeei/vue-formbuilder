@@ -1,0 +1,151 @@
+// Reset css
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote{&:before,&:after{content:'';content:none}}q{&:before,&:after{content:'';content:none}}table{border-collapse:collapse;border-spacing:0}
+
+// Layout
+html, body, #app, .el-container {
+	height: 100%;
+}
+
+body {
+	font-family: 'Roboto', monospace;
+}
+
+.el-main {
+	padding: 0;
+}
+
+
+
+// Empty state
+.emptyState {
+    text-align: center;
+    color: #d7d7d7;
+    padding-top: 50px;
+
+    .emptyState__p {
+		margin-top: 50px;
+    }
+    
+    .emptyState__emoji {
+      font-size: 80px;
+    }
+}
+
+
+// Forms
+.wrapper--forms {
+	padding: 30px;
+	position: relative;
+}
+
+.medium-editor-element {
+	outline: 0;
+}
+
+// Sidebar
+.wrapper--sidebar {
+	padding: 30px;
+
+	.el-tabs {
+		min-height: 450px;
+		border-bottom: 0;
+	}
+
+	.el-tabs__header {
+		margin-bottom: 0;
+	}
+
+	.el-tabs__content {
+		padding: 0px;
+	}
+
+	.el-tabs__inner {
+		padding: 20px;
+	}
+		
+		.el-tabs__nav {
+			float: none;
+
+			.el-tabs__item {
+				width: 33.33%;
+				text-align: center;
+			}
+		}
+
+		.el-tabs--border-card {
+			border: 1px solid black;
+			box-shadow: 8px 8px 0px -2px rgb(49, 49, 49);
+
+			&,
+			> .el-tabs__header .el-tabs__item.is-active {
+
+				color: #516167;
+				background: #f9f9f9;
+			}
+
+			> .el-tabs__header {
+				background: #d6d9dc;
+			}
+		}
+
+		
+
+	.el-form-item__label {
+		line-height: 1;
+	}
+}
+
+// Accordian in tabs
+.el-tab-pane {
+	.el-collapse {
+		border-top: 0;
+	}
+
+	.el-collapse-item__header {
+		padding-left: 20px;
+		background-color: transparent;
+		font-size: 11px;
+		text-transform: uppercase;
+		font-weight: 600;
+		color: $--color-primary;
+		letter-spacing: 0.2em;
+		border-bottom-color: $--color-primary;
+
+		&.is-active { border-bottom-color: transparent; }
+	}
+
+	.el-collapse-item__content {
+		padding-bottom: 0;
+
+		.el-form-item {
+			padding: 10px 20px;
+			margin-bottom: 0;
+			border-bottom: 1px solid $--border-color-lighter;
+
+			display: table;
+			width: 100%;
+			box-sizing: border-box;
+
+			.el-form-item__label,
+			.el-form-item__content {
+				float: none;
+				display: table-cell;
+				vertical-align: middle;
+			}
+
+			.el-form-item__label {
+				color: lighten($--color-text-regular, 10%);
+			}
+
+			.el-form-item__content {
+				line-height: 1;
+				width: 200px;
+				text-align: right;
+			}
+
+			&:last-child {
+				border-bottom: 0;
+			}
+		}
+	}
+}
