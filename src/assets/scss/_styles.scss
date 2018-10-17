@@ -64,12 +64,12 @@ body {
 	}
 
 	.wrapper--snippet {
-		height: 20vh;
+		height: 19vh;
+		background: black;
 		overflow: auto;
 
 		pre {
 			padding: 20px;
-			background: black;
 			color: #ccc;
 			line-height: 1.3;
 		}
