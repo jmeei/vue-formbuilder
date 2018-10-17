@@ -53,7 +53,9 @@
               </div>
             </div>
           </draggable>
-
+        </div>
+        
+        <div class="wrapper--snippet">
           <pre>{{ forms }}</pre>
         </div>
       </el-main>
@@ -73,7 +75,7 @@
           </el-tab-pane>
         </el-tabs>
 
-        {{ $store.activeForm }}
+        <!--{{ $store.activeForm }}-->
       </el-aside>
     </el-container>
   </div>
