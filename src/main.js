@@ -30,25 +30,7 @@ Vue.use(VueLodash)
 // ================
 // Use Vue Router
 // ----------------
-import VueRouter from 'vue-router'
-Vue.use(VueRouter)
-
-// Define Router
-import Home from './views/Home'
-const routes = [
-	//define the root url of the application.
-	{ path: '/', component: Home }
-]
-// Create the router instance and pass the `routes` option
-// You can pass in additional options here, but let's
-// keep it simple for now.
-const router = new VueRouter({
-	routes, // short for routes: routes
-	mode: 'history'
-})
-
-
-
+import router from './router'
 
 
 // ================
